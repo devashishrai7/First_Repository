@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        #div{
+            width: -webkit-fill-available;
+            height: auto;
+            background-color: aquamarine;
+            display: inline-flex;
+        }
+        #tata{
+            background-color: red;
+            color: aquamarine;
+            width: 50px;
+            height: 20px;
+            padding: 0px;
+        }
+        #suzuki{
+            background-color: white;
+            width: 50px;
+            height: 20px;
+            padding: 0px;
+        }
+        #mahindra{
+            background-color: rgb(214, 214, 214);
+            width: 63px;
+            height: 20px;
+            padding: 0px;
+        }
+        #info{
+            width: 482.8px;
+            height: auto;
+            margin: 0px 0px 0px 10px;
+        }
+        #data{
+            background-color: bisque;
+            width: 401px;
+            height: auto;
+            margin: 5px;
+            padding: 4px;
+        }
+        img{
+            width: 400px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <div id="info">
+            <h4>To show Vehicle information of following :  </h4>
+            <button onclick="Tata()" id="tata">Tata </button>
+            <button onclick="Suzuki()" id="suzuki">Suzuki </button>
+            <button onclick="Mahindra()" id="mahindra">Mahindra </button>
+        </div>
+        <div id="data">
+            <table border="1" width=400px>
+                <tr bgcolor="aquamarine">
+                    <th>Property</th>
+                    <th>Property Value</th>
+                </tr>
+                <tr>
+                    <td>Brand Name </td>
+                    <td id="nam"></td>
+                </tr>
+                <tr bgcolor="aqua">
+                    <td>Type </td>
+                    <td id="typ"></td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td id="mod"></td>
+                </tr>
+                <tr bgcolor="aqua">
+                    <td>Color</td>
+                    <td id="col"></td>
+                </tr>
+            </table>
+            <div>
+                <p id="x"></p>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        const Tatacar = {name:"Tata", type:"Altroz", model:"2021", color:"Red"};
+        const Suzukicar = {name:"Suzuki", type:"Baleno", model:"2020", color:"white"};
+        const Mahindracar = {name:"Mahindra", type:"Bolero", model:"2021", color:"Grey"};
+        var img = document.createElement("img");  
+        var src = document.getElementById("x"); 
+        src.appendChild(img);
+        img.src = "1.png"
+        
+
+        function Tata(){
+            document.getElementById("nam").innerHTML=Tatacar.name;
+            document.getElementById("typ").innerHTML=Tatacar.type;
+            document.getElementById("mod").innerHTML=Tatacar.model;
+            document.getElementById("col").innerHTML=Tatacar.color;
+            //document.getElementById("img").src="Tata.jpg"
+            img.src = "Tata.jpg";
+        }
+        function Suzuki(){
+            document.getElementById("nam").innerHTML=Suzukicar.name;
+            document.getElementById("typ").innerHTML=Suzukicar.type;
+            document.getElementById("mod").innerHTML=Suzukicar.model;
+            document.getElementById("col").innerHTML=Suzukicar.color;
+            //document.getElementById("img").innerHTML= 
+            img.src = "Suzuki.jpg";
+        }
+        function Mahindra(){
+            document.getElementById("nam").innerHTML=Mahindracar.name;
+            document.getElementById("typ").innerHTML=Mahindracar.type;
+            document.getElementById("mod").innerHTML=Mahindracar.model;
+            document.getElementById("col").innerHTML=Mahindracar.color;
+            //document.getElementById("img").innerHTML= 
+            img.src = "Mahindra.jpg";
+        }
+    </script>
+</body>
+</html>
